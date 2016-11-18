@@ -35,14 +35,14 @@
                         //e.stopImmediatePropagation();
                     });
                 if ($scope.group.answer) {
-                    $element.find('.current').text($scope.group.answer).removeClass('default');
+                    $element.find('.current').text($scope.group.answer);
                 }
             },
             template: '<div class="select-wrapper">' +
                         '<div class="hiden">' +
                             '<div ng-repeat="(key, value) in group.answers">{{ value.text }}</div>' +
                         '</div>' +
-                        '<div class="current default">{{ "[fill in the blank choose answer]" | translate }}</div>' +
+                        '<div class="current"><span class="default">{{ "[fill in the blank choose answer]" | translate }}</span></div>' +
                         '<div class="highlight"></div>' +
                       '</div>'
         };
@@ -69,7 +69,7 @@
                     .addClass('unstyled')
                     .on('click', 'li', function () {
                         var text = $(this).text();
-                        $element.find('.current').text(text).removeClass('default');
+                        $element.find('.current').text(text);
                         if (callback) {
                             callback(text);
                         }
