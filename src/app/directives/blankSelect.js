@@ -62,7 +62,7 @@
                 .css({
                     position: 'absolute',
                     left: ($element.offset().left - 10) + 'px',
-                    top: ($element.offset().top + $element.outerHeight() + 8) + 'px',
+                    top: ($element.offset().top + $element.outerHeight() + 13) + 'px',
                     width: ($element.outerWidth() + 20) + 'px'
                 })
                 .append($('<ul/>')
